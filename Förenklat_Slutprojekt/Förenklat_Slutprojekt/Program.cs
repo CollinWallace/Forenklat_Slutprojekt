@@ -10,12 +10,12 @@ namespace Förenklat_Slutprojekt
     {
         static void Main(string[] args)
         {
-            List<string> djurlista = new List<string>();
+            List<string> djurlista = new List<string>(); //Skapar en lista för djuren
             Console.WriteLine("---=== Fantasy Races ===---");
             Console.WriteLine("Skriv först in hur många djur du vill lägga till i listan!");
             string DjurAntal = ""; //Stringen är lika med användarens input.
             int Antal = 0;
-            bool isNumeric = int.TryParse(DjurAntal, out Antal); //Detta gör så att man kan kolla om man använder nummer eller bokstäver. Då den tar in ElevAntal och tryparsear den.
+            bool isNumeric = int.TryParse(DjurAntal, out Antal); //Detta gör så att man kan kolla om man använder nummer eller bokstäver. Då den tar in DjurAntal och tryparsear den.
 
             while (isNumeric == false) //.Length används för att mäta hur många symboler som används.
             {
@@ -29,8 +29,7 @@ namespace Förenklat_Slutprojekt
                 }
 
             }
-            djurlista.Add(DjurAntal);
-
+            djurlista.Add(DjurAntal); //Lägger in värdet som ligger i DjurAntal in i Listan.
         }
     }
 }
