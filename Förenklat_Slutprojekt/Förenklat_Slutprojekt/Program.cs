@@ -17,7 +17,7 @@ namespace Förenklat_Slutprojekt
             int Antal = 0;
             bool isNumeric = int.TryParse(DjurAntal, out Antal); //Detta gör så att man kan kolla om man använder nummer eller bokstäver. Då den tar in DjurAntal och tryparsear den.
 
-            while (isNumeric == false || DjurAntal.Length > 0) //.Length används för att mäta hur många symboler som används. Och så att man inte kan skriva en bokstav (False)
+            while (isNumeric == false && Antal <= 0) //.Length används för att mäta hur många symboler som används. Och så att man inte kan skriva en bokstav (False)
             {
                 Console.Write("Skriv antal djur som du vill skapa:  ");
                 DjurAntal = Console.ReadLine();
@@ -26,10 +26,6 @@ namespace Förenklat_Slutprojekt
                 if (isNumeric == false) //Så länge boolen "isNumeric" är false så körs denna if- sats, alltså är det användaren skrev in inte ett nummer.
                 {
                     Console.WriteLine("Det där var inte ett giltigt tal!");
-                }
-                if(DjurAntal.Length > 0)
-                {
-                    Console.WriteLine("Antalet djur kan inte vara 0!");
                 }
 
             }
