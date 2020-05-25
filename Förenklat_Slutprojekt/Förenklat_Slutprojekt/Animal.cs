@@ -24,6 +24,12 @@ namespace Förenklat_Slutprojekt
             if (energyCurrent > 0) // Så länge energyCurrent är större än 0 så kan djuret röra på sig
             {
                 position += Animal.generator.Next(1,speed); //Position skulle plussas på med ett slumpmässigt tal mellan 1 och värdet på djurets Speed
+                energyCurrent--;
+            }
+
+            else if (position > 20) // Detta gör så att så fort position är > 20 så blir den återställd till 20.
+            {
+                position = 20;
             }
         }
 
