@@ -30,7 +30,7 @@ namespace Förenklat_Slutprojekt
 
             }
 
-            for (int counter = 0; counter < Antal; counter++) //Denna for loop kommer att loopas så länge int counter är mindre än Antal (Som är användarens input).
+            for (int counter = 0; counter <= Antal; counter++) //Denna for loop kommer att loopas så länge int counter är mindre än Antal (Som är användarens input).
             {
                 int i = Animal.generator.Next(1, 3); //Jag tar random genaratorn från Animal classen och genererar ett tal mellan 1 och 3. Logiken funkar inte om det är mellan 1,2
 
@@ -52,6 +52,7 @@ namespace Förenklat_Slutprojekt
 
             while (djurRace.position<20) //Så länge djuren är under position 20 så körs loopen. Då position 20 är mållinjen
             {
+                count++; // Adderar rundorna varje gång loopen körs
                 string input = Console.ReadLine(); //Användarens input från Readline lagras i stringen input.
                 djurRace.PrintStats(); //Detta anropar metoden PrintStats och skriver då ut djurens stats.
 
